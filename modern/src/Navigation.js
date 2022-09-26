@@ -7,6 +7,7 @@ import { LinearProgress } from '@mui/material';
 import MainPage from './main/MainPage';
 import RouteReportPage from './reports/RouteReportPage';
 import ServerPage from './settings/ServerPage';
+import CRM from './settings/CRM';
 import UsersPage from './settings/UsersPage';
 import DevicePage from './settings/DevicePage';
 import UserPage from './settings/UserPage';
@@ -37,6 +38,7 @@ import LoginPage from './login/LoginPage';
 import RegisterPage from './login/RegisterPage';
 import ResetPasswordPage from './login/ResetPasswordPage';
 import GeofencesPage from './other/GeofencesPage';
+import PinsPage from './other/PinsPage';
 import GeofencePage from './settings/GeofencePage';
 import useQuery from './common/util/useQuery';
 import { useEffectAsync } from './reactHelper';
@@ -99,7 +101,8 @@ const Navigation = () => {
         <Route path="event/:id" element={<EventPage />} />
         <Route path="replay" element={<ReplayPage />} />
         <Route path="geofences" element={<GeofencesPage />} />
-
+        <Route path="crm" element={<CRM />} />
+        <Route path="pins" element={<PinsPage />} />
         <Route path="settings">
           <Route path="accumulators/:deviceId" element={<AccumulatorsPage />} />
           <Route path="calendars" element={<CalendarsPage />} />

@@ -12,6 +12,8 @@ import BuildIcon from '@mui/icons-material/Build';
 import PeopleIcon from '@mui/icons-material/People';
 import TodayIcon from '@mui/icons-material/Today';
 import PublishIcon from '@mui/icons-material/Publish';
+import TuneIcon from '@mui/icons-material/Tune';
+import PushPinIcon from '@mui/icons-material/PushPin';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useTranslation } from '../../common/components/LocalizationProvider';
@@ -66,6 +68,12 @@ const SettingsMenu = () => {
               link="/geofences"
               icon={<CreateIcon />}
               selected={location.pathname.startsWith('/settings/geofence')}
+            />
+            <MenuItem
+              title="Pins"
+              link="/pins"
+              icon={<PushPinIcon />}
+              selected={location.pathname.startsWith('/settings/pins')}
             />
             {!features.disableGroups && (
               <MenuItem
@@ -133,6 +141,12 @@ const SettingsMenu = () => {
               link="/settings/users"
               icon={<PeopleIcon />}
               selected={location.pathname.startsWith('/settings/user') && location.pathname !== `/settings/user/${userId}`}
+            />
+            <MenuItem
+              title="CRM"
+              link="/crm"
+              icon={<TuneIcon />}
+              selected={location.pathname.startsWith('/settings/crm') && location.pathname !== `/settings/user/${userId}`}
             />
           </List>
         </>

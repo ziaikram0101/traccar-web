@@ -10,6 +10,9 @@ const MapDefaultCamera = () => {
 
   const defaultLatitude = usePreference('latitude');
   const defaultLongitude = usePreference('longitude');
+  // const defaultLatitude = 31.19;
+  // const defaultLongitude = 71.49;
+  // const defaultZoom = 5;
   const defaultZoom = usePreference('zoom', 0);
 
   const [initialized, setInitialized] = useState(false);
